@@ -77,59 +77,6 @@ fun main() {
 
                     call.respond(countries)
                 }
-                //println("Route /countries registered")
-                /*get("/by-flag-colors") {
-                    //println("Route /countries/by-flag-colors registered")
-                    val red = call.request.queryParameters["red"]?.toIntOrNull() ?: 0
-                    val green = call.request.queryParameters["green"]?.toIntOrNull() ?: 0
-                    val blue = call.request.queryParameters["blue"]?.toIntOrNull() ?: 0
-                    val yellow = call.request.queryParameters["yellow"]?.toIntOrNull() ?: 0
-                    val orange = call.request.queryParameters["orange"]?.toIntOrNull() ?: 0
-                    val white = call.request.queryParameters["white"]?.toIntOrNull() ?: 0
-                    val black = call.request.queryParameters["black"]?.toIntOrNull() ?: 0
-
-                    val countriesRepository = CountriesRepository()
-
-                    val countries = countriesRepository.findCountriesByFlagColors(
-                        red, green, blue, yellow, orange, white, black
-                    )
-
-                    println(countries)
-                    call.respond(countries)
-                }
-
-                get("/by-flag-layout") {
-                    val horizontal = call.request.queryParameters["horizontal"]?.toIntOrNull() ?: 0
-                    val vertical = call.request.queryParameters["vertical"]?.toIntOrNull() ?: 0
-                    val diagonal = call.request.queryParameters["diagonal"]?.toIntOrNull() ?: 0
-                    val centered = call.request.queryParameters["centered"]?.toIntOrNull() ?: 0
-                    val triangleHorizontal = call.request.queryParameters["triangleHorizontal"]?.toIntOrNull() ?: 0
-                    val other = call.request.queryParameters["other"]?.toIntOrNull() ?: 0
-
-                    val countriesRepository = CountriesRepository()
-                    val countries = countriesRepository.findCountriesByFlagLayout(
-                        horizontal, vertical, diagonal, centered, triangleHorizontal, other
-                    )
-                    println(countries)
-                    call.respond(countries)
-                }
-
-                get("/by-flag-symbols") {
-                    val circleSign = call.request.queryParameters["circle_sign"]?.toIntOrNull() ?: 0
-                    val crescentSign = call.request.queryParameters["crescent_sign"]?.toIntOrNull() ?: 0
-                    val crossSign = call.request.queryParameters["cross_sign"]?.toIntOrNull() ?: 0
-                    val starSign = call.request.queryParameters["star_sign"]?.toIntOrNull() ?: 0
-                    val sunSign = call.request.queryParameters["sun_sign"]?.toIntOrNull() ?: 0
-                    val otherSign = call.request.queryParameters["other_sign"]?.toIntOrNull() ?: 0
-                    val noSigns = call.request.queryParameters["no_signs"]?.toIntOrNull() ?: 0
-
-                    val countriesRepository = CountriesRepository()
-                    val countries = countriesRepository.findCountriesByFlagSymbols(
-                        circleSign, crescentSign, crossSign, starSign, sunSign, otherSign, noSigns
-                    )
-                    println(countries)
-                    call.respond(countries)
-                }*/
             }
         }
     }.start(wait = true)
