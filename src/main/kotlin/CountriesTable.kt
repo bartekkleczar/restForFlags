@@ -6,7 +6,6 @@ import org.jetbrains.exposed.sql.Column
 
 object CountriesTable : IdTable<String>("countriestable") {
     override val id: Column<EntityID<String>> = varchar("code", 3).entityId()
-    val flagPath = text("flag_path")
     val name = text("name")
     val red = integer("red")
     val green = integer("green")

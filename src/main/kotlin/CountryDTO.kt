@@ -6,5 +6,5 @@ import kotlinx.serialization.Serializable
 data class CountryDTO(
     val code: String,
     val name: String,
-    val flagPath: String
+    val flagUrl: String
 )

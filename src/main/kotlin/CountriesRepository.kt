@@ -1,6 +1,5 @@
 package org.example
 
-import org.jetbrains.exposed.sql.ResultRow
 import org.jetbrains.exposed.sql.andWhere
 import org.jetbrains.exposed.sql.selectAll
 import org.jetbrains.exposed.sql.transactions.transaction
@@ -53,10 +52,12 @@ class CountriesRepository {
                 if (otherSign != 0) andWhere { CountriesTable.otherSign eq otherSign }
                 if (noSigns != 0) andWhere { CountriesTable.noSigns eq noSigns }
             }.map{ row ->
+                val code = row[CountriesTable.id].value
+                val flagUrl = "http://localhost:8080/flags/$code"
                 CountryDTO(
-                    code = row[CountriesTable.id].value,
+                    code = code,
                     name = row[CountriesTable.name],
-                    flagPath = row[CountriesTable.flagPath]
+                    flagUrl = flagUrl
                 )
             }
         }
