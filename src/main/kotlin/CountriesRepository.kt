@@ -53,7 +53,7 @@ class CountriesRepository {
                 if (noSigns != 0) andWhere { CountriesTable.noSigns eq noSigns }
             }.map{ row ->
                 val code = row[CountriesTable.id].value
-                val flagUrl = "http://localhost:8080/flags/$code"
+                val flagUrl = "http://localhost:8080/flags/$code.png"
                 CountryDTO(
                     code = code,
                     name = row[CountriesTable.name],
