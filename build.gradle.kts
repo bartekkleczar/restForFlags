@@ -14,16 +14,13 @@ repositories {
 
 dependencies {
     val ktor_version = "3.1.1"
-    val logback_version = "1.2.11"
 
-    // Podstawowe funkcjonalności Ktor
+    // Ktor
     implementation("io.ktor:ktor-server-core:$ktor_version")
-    // Silnik Netty, który uruchamia serwer
+    // Netty
     implementation("io.ktor:ktor-server-netty:$ktor_version")
-    // Plugin do obsługi StatusPages (obsługa błędów)
+    // StatusPages
     implementation("io.ktor:ktor-server-status-pages:$ktor_version")
-    // Logging (przydatny przy debugowaniu i monitoringu)
-    implementation("ch.qos.logback:logback-classic:$logback_version")
     // Kotlin Serialization
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
     // Ktor Content Negotiation
@@ -44,6 +41,5 @@ kotlin {
 }
 
 application {
-    // Główna klasa Twojej aplikacji
     mainClass.set("org.example.MainKt")
 }
